@@ -7,8 +7,12 @@ import EditGame from "./components/EditGame";
 import GameDetails from "./components/GameDetails";
 import GameCatalog from "./components/GameCatalog";
 import ErrorPage from "./components/ErrorPage"
+import { useState } from 'react';
+
 
 function App() {
+  let [page, setPage] = useState('/home');
+
 let routes = {
   '/home': <WelcomeWorld/>,
   '/games': <GameCatalog/>,
@@ -18,6 +22,7 @@ let routes = {
   '/register': <Register/>,
 };
 function navigationChangeHandler (path) {
+  setPage(path)
  console.log(path);
   
 }
@@ -29,7 +34,7 @@ function navigationChangeHandler (path) {
     <Header navigationChangeHandler={navigationChangeHandler} />
 
     <main id="main-content">
-    <WelcomeWorld/>
+   {routes[page] || <ErrorPage/>}
     </main>
 
 

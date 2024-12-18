@@ -2,7 +2,7 @@ function EditGame () {
     return (
         <section id="edit-page" class="auth">
         <form id="edit">
-            <div class="container">
+            <div className="container">
 
                 <h1>Edit Game</h1>
                 <label htmlFor="leg-title">Legendary title:</label>
@@ -19,7 +19,7 @@ function EditGame () {
 
                 <label htmlFor="summary">Summary:</label>
                 <textarea name="summary" id="summary"></textarea>
-                <input class="btn submit" type="submit" value="Edit Game"/>
+                <input className="btn submit" type="submit" value="Edit Game"/>
 
             </div>
         </form>
