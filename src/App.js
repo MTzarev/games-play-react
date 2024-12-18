@@ -6,20 +6,30 @@ import CreateGame from "./components/CreateGame";
 import EditGame from "./components/EditGame";
 import GameDetails from "./components/GameDetails";
 import GameCatalog from "./components/GameCatalog";
+import ErrorPage from "./components/ErrorPage"
 
 function App() {
 let routes = {
   '/home': <WelcomeWorld/>,
   '/games': <GameCatalog/>,
-  '/create-game': <CreateGame/>
+  '/create-game': <CreateGame/>,
+  '/logout': <ErrorPage/>,
+  '/login': <Login/>,
+  '/register': <Register/>,
+};
+function navigationChangeHandler (path) {
+ console.log(path);
+  
 }
+
+
   return (
     <div id="box">
 
-    <Header></Header>
+    <Header navigationChangeHandler={navigationChangeHandler} />
 
     <main id="main-content">
-    <WelcomeWorld></WelcomeWorld>
+    <WelcomeWorld/>
     </main>
 
 
