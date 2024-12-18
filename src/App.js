@@ -20,6 +20,7 @@ let routes = {
   '/logout': <ErrorPage/>,
   '/login': <Login/>,
   '/register': <Register/>,
+  
 };
 function navigationChangeHandler (path) {
   setPage(path)
