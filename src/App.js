@@ -6,7 +6,13 @@ import CreateGame from "./components/CreateGame";
 import EditGame from "./components/EditGame";
 import GameDetails from "./components/GameDetails";
 import GameCatalog from "./components/GameCatalog";
+
 function App() {
+let routes = {
+  '/home': <WelcomeWorld/>,
+  '/games': <GameCatalog/>,
+  '/create-game': <CreateGame/>
+}
   return (
     <div id="box">
 
