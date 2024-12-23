@@ -3,7 +3,7 @@ import WelcomeWorld from "./components/WelcomeWorld";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import CreateGame from "./components/CreateGame";
-import EditGame from "./components/EditGame";
+//import EditGame from "./components/EditGame";
 import GameDetails from "./components/GameDetails";
 import GameCatalog from "./components/GameCatalog";
 import ErrorPage from "./components/ErrorPage"
