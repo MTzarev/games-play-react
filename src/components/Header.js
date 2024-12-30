@@ -1,4 +1,5 @@
-function Header (props) {
+
+function Header (props, navigationChangeHandler) {
     let onHeaderClick = (e) => {
         e.preventDefault();
        

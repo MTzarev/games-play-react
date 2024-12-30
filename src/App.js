@@ -24,7 +24,7 @@ let router = (path) => {
   let argument = pathNames[2];
 
   let routes = {
-    'home': <WelcomeWorld/>,
+    'home': <WelcomeWorld />,
     'games': <GameCatalog navigationChangeHandler={navigationChangeHandler}/>,
     'create-game': <CreateGame/>,
     'logout': <ErrorPage/>,
