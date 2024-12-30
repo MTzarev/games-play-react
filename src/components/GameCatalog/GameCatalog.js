@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import GameCard from "./GameCard";
-import * as gameSercice from "../../services/gameSercice"
+import * as gameSercice from "../../services/gameService"
 function GameCatalog ({navigationChangeHandler}) {
     let [games, setGames] = useState([]);
   
