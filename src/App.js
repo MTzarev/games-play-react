@@ -6,9 +6,9 @@ import CreateGame from "./components/CreateGame";
 //import EditGame from "./components/EditGame";
 import GameDetails from "./components/GameDetails";
 import GameCatalog from "./components/GameCatalog/GameCatalog";
-import ErrorPage from "./components/ErrorPage"
+import ErrorPage from "./components/ErrorPage";
 import { useState } from 'react';
-
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   let [page, setPage] = useState('/home');
@@ -47,7 +47,13 @@ let router = (path) => {
     />
 
     <main id="main-content">
-   {router(page) || <ErrorPage/>}
+      <Switch>
+          <Route path="/" exact component = {WelcomeWorld} />
+          <Route path = "/games" component = {GameCatalog} />
+          <Route path = "/create-game" component = {CreateGame} />
+          <Route path = "/login" component = {Login} />
+          <Route path = "/register" component = {Register} />
+      </Switch>
     </main>
 
 
