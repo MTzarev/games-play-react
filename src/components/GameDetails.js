@@ -2,17 +2,17 @@ import { useState, useEffect } from "react";
 import * as gameService from '../services/gameService'
 
 let GameDetails = ({
-    id, 
+    match, 
 }) =>{
     let [game, setGame] = useState ({});
     
     useEffect(() => {
         const fetchData = async () => {
-            let result = await gameService.getOne(id);
+            let result = await gameService.getOne(match.params.gameId);
             setGame(result);
         };
         fetchData();
-    }, [id]);
+    }, [match]);
     return (
         <section id="game-details">
         <h1>Game Details</h1>
