@@ -1,4 +1,5 @@
 function ErrorPage () {
+    
     return (
         <section id="catalog-page">
         <h1>Don't do that!</h1>
