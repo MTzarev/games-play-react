@@ -7,6 +7,5 @@ function ErrorPage () {
                
     </section>
     );
-
 }
 export default ErrorPage;
