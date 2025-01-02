@@ -26,7 +26,7 @@ let GameDetails = ({
             </div>
 
             <p className="text">
-                {game.summary}
+                {game.summary};
                </p>
 
             <div className="details-comments">
