@@ -17,7 +17,6 @@ let GameDetails = ({
         <section id="game-details">
         <h1>Game Details</h1>
         <div className="info-section">
-
             <div className="game-header">
                 <img className="game-img" src={game.imageUrl} alt="" />
                 <h1>{game.title}</h1>
