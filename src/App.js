@@ -7,57 +7,26 @@ import CreateGame from "./components/CreateGame";
 import GameDetails from "./components/GameDetails";
 import GameCatalog from "./components/GameCatalog/GameCatalog";
 import ErrorPage from "./components/ErrorPage";
-import { useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { useState } from "react";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
-  let [page, setPage] = useState('/home');
-
-  const navigationChangeHandler = (path) => {
-    setPage(path);    
-  }
-
-
-let router = (path) => {
-  let pathNames = path.split(`/`);
-  let rootPath = pathNames[1];
-  let argument = pathNames[2];
-
-  let routes = {
-    'home': <WelcomeWorld />,
-    'games': <GameCatalog navigationChangeHandler={navigationChangeHandler}/>,
-    'create-game': <CreateGame/>,
-    'logout': <ErrorPage/>,
-    'login': <Login/>,
-    'register': <Register/>,
-    'details': <GameDetails id = {argument}/>
-    
-  };
-  
-  
-  return routes[rootPath]
-
-}
-
   return (
     <div id="box">
+      <Header />
 
-    <Header 
-    navigationChangeHandler={navigationChangeHandler} 
-    />
-
-    <main id="main-content">
-      <Switch>
-          <Route path="/" exact component = {WelcomeWorld} />
-          <Route path = "/games" component = {GameCatalog} />
-          <Route path = "/create-game" component = {CreateGame} />
-          <Route path = "/login" component = {Login} />
-          <Route path = "/register" component = {Register} />
-      </Switch>
-    </main>
-
-
-</div>
+      <main id="main-content">
+        <Switch>
+          <Route path="/" exact component={WelcomeWorld} />
+          <Route path="/games/:gameId" exact component={GameDetails} />
+          <Route path="/games" component={GameCatalog} />
+          <Route path="/create-game" component={CreateGame} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path= "/logout" component= {ErrorPage} />
+        </Switch>
+      </main>
+    </div>
   );
 }
 

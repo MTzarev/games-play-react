@@ -1,6 +1,5 @@
+import {Link} from 'react-router-dom';
 function LatestGameCard ({game}) {
-    let onDetailsClick = (e)=>
-        e.preventDefault()
 return (
     <div className="game">
     <div className="image-wrap">
@@ -11,9 +10,8 @@ return (
         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
     </div>
     <div className="data-buttons">
-        <a href={`{/details/${game._id}}`}
-        onClick={onDetailsClick}
-         className="btn details-btn">Details</a>
+        <Link to={`/games/${game._id}`}
+         className="btn details-btn">Details</Link>
     </div>
 </div>
 )
