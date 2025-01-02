@@ -24,7 +24,6 @@ let GameDetails = ({
                 <span className="levels">MaxLevel: {game.maxLevel}</span>
                 <p className="type">{game.category}</p>
             </div>
-
             <p className="text">
                 {game.summary};
                </p>
