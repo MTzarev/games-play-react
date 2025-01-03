@@ -8,7 +8,6 @@ import GameDetails from "./components/GameDetails";
 import GameCatalog from "./components/GameCatalog/GameCatalog";
 import ErrorPage from "./components/ErrorPage";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { Router } from "react-router-dom/cjs/react-router-dom.min";
 
 function App() {
   return (
