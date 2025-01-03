@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import * as gameService from '../services/gameService'
+import { Link } from 'react-router-dom'
 
 let GameDetails = ({
     match, 
@@ -41,8 +42,8 @@ let GameDetails = ({
             </div>
 
             <div className="buttons">
-                <a href="#" className="button">Edit</a>
-                <a href="#" className="button">Delete</a>
+                <Link to="#" className="button">Edit</Link>
+                <Link to="#" className="button">Delete</Link>
             </div>
         </div>
 

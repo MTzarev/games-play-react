@@ -7,7 +7,6 @@ import CreateGame from "./components/CreateGame";
 import GameDetails from "./components/GameDetails";
 import GameCatalog from "./components/GameCatalog/GameCatalog";
 import ErrorPage from "./components/ErrorPage";
-import { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
