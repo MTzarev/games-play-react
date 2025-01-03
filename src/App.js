@@ -7,7 +7,8 @@ import CreateGame from "./components/CreateGame";
 import GameDetails from "./components/GameDetails";
 import GameCatalog from "./components/GameCatalog/GameCatalog";
 import ErrorPage from "./components/ErrorPage";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
+import { Router } from "react-router-dom/cjs/react-router-dom.min";
 
 function App() {
   return (
@@ -22,7 +23,11 @@ function App() {
           <Route path="/create-game" component={CreateGame} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
-          <Route path= "/logout" component= {ErrorPage} />
+{/* Redirect */}
+          <Route exact path="/logout" render={() => <Redirect to="/" />} />
+          <Route path="/" component={WelcomeWorld} />
+           
+    
         </Switch>
       </main>
     </div>
